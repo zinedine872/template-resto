@@ -1,0 +1,372 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+/* Header avec background slider */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlide 30s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff914d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, opacity 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ff5500;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Menu items */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.item {
+    width: 250px;
+    margin: 15px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Animation slider du fond */
+@keyframes backgroundSlide {
+    0% { background-image: url('../images/slide1.jpg'); }
+    25% { background-image: url('../images/slide2.jpg'); }
+    50% { background-image: url('../images/slide3.jpg'); }
+    75% { background-image: url('../images/slide4.jpg'); }
+    100% { background-image: url('../images/slide1.jpg'); }
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+/* Small hero */
+.small-hero {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Équipe */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.member {
+    width: 250px;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 50%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Formulaire de contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 200px;
+}
+
+/* Image de menu si utilisée */
+.menu-image-section img.menu-image {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Image fixe dans le header menu */
+.menu-hero {
+    height: 60vh;
+    background-image: url('../images/menu-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Section slider horizontal spécialités */
+.special-slider-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    scroll-snap-align: center;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Positionnement des boutons */
+.btn-left {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.btn-right {
+    display: inline-block;
+    margin-top: 20px;
+    float: right;
+}
+.sidebar-buttons {
+    position: fixed;
+    top: 100px; /* Distance du haut */
+    left: 20px; /* Distance du côté gauche */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.sidebar-buttons .btn {
+    width: 140px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #ff914d;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.sidebar-buttons .btn:hover {
+    background-color: #ff5500;
+}
+.special-slider-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center; /* ➔ Ajouté pour centrer tout le contenu */
+}
+
+.slide {
+    scroll-snap-align: center;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    text-align: center; /* ➔ Centre l'image + le texte */
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center; /* ➔ Centre aussi le texte sous l'image */
+}
+@media (max-width: 768px) {
+    .slide {
+        min-width: 200px; /* Un peu plus petit pour mobile */
+    }
+
+    .slider-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .slide img {
+        height: 160px;
+    }
+}
