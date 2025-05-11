@@ -1,70 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Restaurant Drixod</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Restaurant Drixod</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* BANNIÈRE FIXE BEIGE */
+    nav.top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f5f5dc; /* beige */
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.top-bar a {
+      color: white;
+      background-color: #ff6600; /* orange foncé */
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav.top-bar a:hover {
+      background-color: #cc5200;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 70px; /* espace sous la nav */
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-hero {
+      background: url('images/menu-bg.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .menu-block {
+      flex: 1 1 400px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .menu-block h3 {
+      color: #ff6600;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .menu-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-block li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar-buttons">
-        <a href="index.html" class="btn">Accueil</a>
-        <a href="gallery.html" class="btn">Galerie</a>
-        <a href="contact.html" class="btn">Contact</a>
+
+    <nav class="top-bar">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+  <header class="menu-hero">
+    <div class="hero-text">
+      <h1>Notre Carte</h1>
     </div>
+  </header>
 
-    <header class="menu-hero">
-        <div class="hero-text">
-            <h1>Notre Carte</h1>
-        </div>
-    </header>
+  <section class="menu-section">
+    <h2>Carte du Restaurant</h2>
 
-    <section class="menu-section">
-        <h2>Carte du Restaurant</h2>
-    
-        <div class="menu-grid">
-            <div class="menu-block">
-                <h3>Entrées</h3>
-                <ul>
-                    <li><span>Salade verte croquante</span><span>CHF 9.-</span></li>
-                    <li><span>Soupe de légumes maison</span><span>CHF 11.-</span></li>
-                    <li><span>Bruschetta à la tomate</span><span>CHF 10.-</span></li>
-                </ul>
-    
-                <h3>Desserts</h3>
-                <ul>
-                    <li><span>Mousse au chocolat noir</span><span>CHF 8.-</span></li>
-                    <li><span>Tiramisu classique</span><span>CHF 9.-</span></li>
-                    <li><span>Crème brûlée à la vanille</span><span>CHF 10.-</span></li>
-                </ul>
-            </div>
-    
-            <div class="menu-block">
-                <h3>Plats principaux</h3>
-                <ul>
-                    <li><span>Entrecôte de boeuf, frites maison</span><span>CHF 28.-</span></li>
-                    <li><span>Risotto aux champignons</span><span>CHF 24.-</span></li>
-                    <li><span>Tagliatelles au saumon</span><span>CHF 26.-</span></li>
-                </ul>
-    
-                <h3>Boissons</h3>
-                <ul>
-                    <li><span>Eau minérale / gazeuse</span><span>CHF 4.-</span></li>
-                    <li><span>Coca-Cola / Fanta</span><span>CHF 5.-</span></li>
-                    <li><span>Verre de vin (rouge ou blanc)</span><span>CHF 7.-</span></li>
-                </ul>
-            </div>
-        </div>
-    
-        <a href="index.html" class="btn">Retour à l'Accueil</a>
-    </section>
+    <div class="menu-grid">
+      <div class="menu-block">
+        <h3>Entrées</h3>
+        <ul>
+          <li><span>Salade verte croquante</span><span>CHF 9.-</span></li>
+          <li><span>Soupe de légumes maison</span><span>CHF 11.-</span></li>
+          <li><span>Bruschetta à la tomate</span><span>CHF 10.-</span></li>
+        </ul>
 
-    <footer>
-        <p>© 2025 Drixod. Tous droits réservés.</p>
-        <p>Téléphone : 078 123 45 67</p>
-        <p>Adresse : Rue de l'Exemple 12, 2500 Bienne</p>
-    </footer>
+        <h3>Desserts</h3>
+        <ul>
+          <li><span>Mousse au chocolat noir</span><span>CHF 8.-</span></li>
+          <li><span>Tiramisu classique</span><span>CHF 9.-</span></li>
+          <li><span>Crème brûlée à la vanille</span><span>CHF 10.-</span></li>
+        </ul>
+      </div>
 
-    <script src="js/main.js"></script>
+      <div class="menu-block">
+        <h3>Plats principaux</h3>
+        <ul>
+          <li><span>Entrecôte de boeuf, frites maison</span><span>CHF 28.-</span></li>
+          <li><span>Risotto aux champignons</span><span>CHF 24.-</span></li>
+          <li><span>Tagliatelles au saumon</span><span>CHF 26.-</span></li>
+        </ul>
+
+        <h3>Boissons</h3>
+        <ul>
+          <li><span>Eau minérale / gazeuse</span><span>CHF 4.-</span></li>
+          <li><span>Coca-Cola / Fanta</span><span>CHF 5.-</span></li>
+          <li><span>Verre de vin (rouge ou blanc)</span><span>CHF 7.-</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Drixod. Tous droits réservés.</p>
+    <p>Téléphone : 078 123 45 67</p>
+    <p>Adresse : Rue de l'Exemple 12, 2500 Bienne</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
