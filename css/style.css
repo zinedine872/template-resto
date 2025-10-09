@@ -528,3 +528,52 @@ form button:hover,
   nav.top-bar a:hover {
     background-color: #cc5200;
   }
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section responsive */
+section {
+  padding: 20px;
+}
+
+/* Textes lisibles sur mobile */
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Menu responsive */
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* Les liens passent à la ligne si l’écran est petit */
+  gap: 10px;
+}
+
+/* ⚡ Media queries pour téléphone */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
