@@ -44,6 +44,7 @@
   </style>
 </head>
 <body>
+  <div class="mobile-wrapper">
 
     <nav class="top-bar">
         <a href="index.html">Accueil</a>
@@ -88,5 +89,19 @@
   </footer>
 
   <script src="js/main.js"></script>
+  </div>
+  @media (min-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .mobile-wrapper {
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+}
 </body>
 </html>

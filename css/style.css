@@ -577,3 +577,30 @@ nav ul {
     font-size: 1.2rem;
   }
 }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #000;        /* par ex. fond foncé autour */
+}
+
+/* Conteneur type écran de téléphone */
+.mobile-wrapper {
+  max-width: 480px;        /* largeur typique d’un tel */
+  margin: 0 auto;          /* centre sur les grands écrans */
+  padding: 16px;
+  background: #111;        /* fond du site */
+  min-height: 100vh;
+}
+
+/* Galerie : 1 colonne sur téléphone */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
